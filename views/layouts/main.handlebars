@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Scrape Machine</title>
+	<meta name="viewport" content="width=device-width">
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+	<link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<link rel="stylesheet" href="assets/css/scrape.css"  rel="stylesheet">
+</head>
+<body>
+	<nav>
+	  <div class="nav-wrapper">
+	    <a href="#" class="brand-logo right">Scrape Machine</a>
+	    <ul id="nav-mobile" class="left hide-on-med-and-down">
+	      <li><a href="/">Home</a></li>
+	      <li><a href="/saved">Saved Articles</a></li>
+	      <button id="scrape-btn" class="waves-effect waves-light btn">Scrape Hacker News</button>
+	    </ul>
+	  </div>
+	</nav>
+	{{{ body }}}
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+	<script src="assets/logic/buttonLogic.js" type="text/javascript"></script>
+</body>
+</html>
