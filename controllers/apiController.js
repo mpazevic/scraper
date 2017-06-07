@@ -47,16 +47,6 @@ module.exports.scrapeArticles = (req, res) => {
   });
 };
 
-module.exports.getArticle = (req, res) => {
-  Articles.find({}).populate('comments').exec((err, found) => {
-    if (err) {
-      console.log(err)
-    } else {
-      res.json(found)
-    }
-  })
-};
-
 module.exports.postComment = (req, res) => {
   let newComment = new Comment(req.body)
   console.log(req.body)
@@ -76,15 +66,5 @@ module.exports.delComment = (req, res) => {
     console.log("Deleted comment " + req.body.commentId)
     console.log(JSON.parse(result))
     res.json(result)
-  })
-}
-
-module.exports.getComments = (req, res) => {
-  Comment.find({}).populate('_article').exec((err, comments) => {
-    if (err) {
-      console.log(err)
-    } else {
-      res.json(comments)
-    }
   })
 }

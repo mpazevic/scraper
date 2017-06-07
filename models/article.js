@@ -1,4 +1,4 @@
-//Create an article Schema using the Mongoose ORM.
+//Create an article Schema using the Mongoose ORM
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
