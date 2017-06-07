@@ -10,7 +10,7 @@ const exphbs = require("express-handlebars");
 const viewRouter = require("./routes/viewRouter.js");
 const apiRouter = require("./routes/apiRouter.js");
 
-const PORT = process.env.port || 8080;
+const PORT = process.env.PORT || 8080;
 
 //set up express
 const app = express();
@@ -23,7 +23,8 @@ app.set("view engine", "handlebars");
 
 // Mongoose set-up
 const localDbUrl = 'mongodb://localhost/scrapeDB'
-mongoose.connect(process.env.MONGOLAB_URI || localDbUrl)
+//process.env.MONGOLAB_URI || localDbUrl --> connect with these if desired
+mongoose.connect("mongodb://heroku_gz9s0fsn:658o11ge1hval9njdg70jo89tv@ds115712.mlab.com:15712/heroku_gz9s0fsn");
 var db = mongoose.connection;
 
 // Track any Mongoose errors
